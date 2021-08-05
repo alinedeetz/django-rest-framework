@@ -2,7 +2,6 @@ from django.shortcuts import render
 from rest_framework import viewsets, generics
 from .models import Client
 from .serializers import ClientSerializer, EditClientSerializer
-
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer 
@@ -18,4 +17,3 @@ class HistoryViewSet(viewsets.ModelViewSet):
             return Client.history.all()
         else:
             return Client.history.filter(id=id)
-
