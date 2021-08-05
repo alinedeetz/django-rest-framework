@@ -6,7 +6,7 @@ class ClientSerializer(serializers.ModelSerializer):
         model = Client
         fields = ('id', 'name', 'adress', 'age', 'email')
 
-class EditClientSerializer(serializers.ModelSerializer):
+class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Client.history.model
         fields = '__all__'

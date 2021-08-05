@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets, generics
 from .models import Client
-from .serializers import ClientSerializer, EditClientSerializer
+from .serializers import ClientSerializer, HistorySerializer
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer 
 
 class HistoryViewSet(viewsets.ModelViewSet):
     # queryset = Client.history.filter()
-    serializer_class = EditClientSerializer
+    serializer_class = HistorySerializer
 
     def get_queryset(self):
         id = self.request.query_params.get('id')
