@@ -8,6 +8,7 @@ class Client(models.Model):
     adress = models.CharField(max_length=50)
     age = models.IntegerField()
     email = models.EmailField(default='default@default.com')
+    date = models.DateField()
     history = HistoricalRecords()
 
     def __str__(self):
