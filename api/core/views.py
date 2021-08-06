@@ -17,3 +17,8 @@ class HistoryViewSet(viewsets.ModelViewSet):
             return Client.history.all()
         else:
             return Client.history.filter(id=id)
+
+class DateViewSet(viewsets.ModelViewSet):
+    pass
+
+
