@@ -10,6 +10,7 @@ router.register(r'clients', ClientViewSet)
 
 router.register(r'history', HistoryViewSet, basename='History')
 
+router.register(r'date', DateViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
