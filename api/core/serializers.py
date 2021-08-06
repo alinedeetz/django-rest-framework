@@ -10,3 +10,8 @@ class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Client.history.model
         fields = '__all__'
+
+class DateSerializer(serializers.ModelSerializer):
+    pass
+
+
