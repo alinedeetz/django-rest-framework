@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, generics
 from .models import Client, Product
-from .serializers import ClientSerializer, ProductSerializer, HistorySerializer
+from .serializers import ClientSerializer, ProductSerializer, ClientHistorySerializer
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
@@ -12,7 +12,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 class HistoryViewSet(viewsets.ModelViewSet):
     # queryset = Client.history.filter()
-    serializer_class = HistorySerializer
+    serializer_class = ClientHistorySerializer
 
     def get_queryset(self):
         id = self.request.query_params.get('id')
