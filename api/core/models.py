@@ -5,6 +5,7 @@ from simple_history.models import HistoricalRecords
 class Product(models.Model):
     product = models.CharField(max_length=50)
     price = models.IntegerField()
+    quantity = models.IntegerField()
     history = HistoricalRecords()
 
 class Client(models.Model):
