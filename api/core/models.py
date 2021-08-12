@@ -9,7 +9,8 @@ class Product(models.Model):
     history = HistoricalRecords()
 
 class Client(models.Model):
-    name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50, blank=True, null=True)
+    last_name = models.CharField(max_length=50, blank=True, null=True)
     adress = models.CharField(max_length=50)
     age = models.IntegerField()
     email = models.EmailField(default='default@default.com')
